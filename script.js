@@ -2,7 +2,7 @@ const inputBox=document.getElementById('input-box');
 
 const listContainer=document.getElementById('list-container');
 
-function addTask(){
+function addTask(e){
     if(inputBox.value ===''){
         alert("You must write something");
     }
@@ -16,6 +16,8 @@ function addTask(){
     }
     inputBox.value='';
     saveData();
+    e.preventDefault;
+    return false;
 }
 
 listContainer.addEventListener('click', function(e){
